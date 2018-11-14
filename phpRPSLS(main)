@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+	    <h1>Rock, Paper, Scissors, Lizard, Spock Game!</h1>
+
+
+<?php
+$player = substr(filter_input(INPUT_POST, "player", FILTER_SANITIZE_STRING),0,10);
+$crps = array('rock', 'paper', 'scissors', 'lizard', 'spock');
+$random = $crps[rand(0, 4)];
+
+
+if ($random == "rock")
+{
+    echo "<p>Computer picked rock</p><br>";
+	echo '<p><img src="images/rock1.png"</p><br>';
+}
+elseif ($random == "paper")
+{
+    echo "<p>Computer picked paper</p><br>";
+	echo '<p><img src="images/paper1.png"</p><br>';
+}
+elseif ($random == "scissors")
+{
+    echo "<p>Computer picked scissors</p><br>";
+	echo '<p><img src="images/scissors1.png"</p><br>';
+}
+elseif ($random == "lizard")
+{
+    echo "<p>Computer picked lizard</p><br>";
+}
+elseif ($random == "spock")
+{
+    echo "<p>Computer picked spock</p><br>";
+}
+
+
+if ($player == "rock")
+{
+    echo "<p>Player picked rock</p><br>";
+}
+elseif ($player == "paper")
+{
+    echo "<p>Player picked paper</p><br>";
+}
+elseif ($player == "scissors")
+{
+    echo "<p>Player picked scissors</p><br>";
+}
+elseif ($player == "lizard")
+{
+    echo "<p>Player picked lizard</p><br>";
+}
+elseif ($player == "spock")
+{
+    echo "<p>Player picked spock</p><br>";
+}
+
+
+if ($random == "rock" and $player == "paper")
+{
+    echo "<p>Paper covers rock, the Player wins!</p><br>";
+}
+elseif ($random == "paper" and $player == "rock")
+{
+    echo "<p>Paper covers rock, the Computer wins!</p><br>";
+}
+elseif ($random == "rock" and $player == "scissors")
+{
+    echo "<p>Rock crushes scissors, the Computer wins!</p><br>";
+}
+elseif ($random == "scissors" and $player == "rock")
+ {
+     echo "<p>Rock crushes scissors, the Player wins!</p><br>";
+ }
+elseif ($random == "rock" and $player == "spock")
+{
+    echo "<p>Spock vaporizes rock, the Player wins!</p><br>";
+}
+elseif ($random == "spock" and $player == "rock")
+{
+    echo "<p>Spock vaporizes rock, the Computer wins!</p><br>";
+}
+elseif ($random == "rock" and $player == "lizard")
+{
+    echo "<p>Rock crushes lizard, the Computer wins!</p><br>";
+}
+elseif ($random == "lizard" and $player == "rock")
+{
+    echo "<p>Rock crushes lizard, the Player wins!</p><br>";
+}
+
+
+if ($random == "paper" and $player == "lizard")
+{
+    echo "<p>Lizard eats paper, the Player wins!</p><br>";
+}
+elseif ($random == "lizard" and $player == "paper")
+{
+    echo "<p>Lizard eats paper, the Computer wins!</p><br>";
+}
+elseif ($random == "paper" and $player == "scissors")
+{
+    echo "<p>Scissors cuts paper, the Player wins!</p><br>";
+}
+elseif ($random == "scissors" and $player == "paper")
+{
+    echo "<p>Scissors cuts paper, the Computer wins!</p><br>";
+}
+elseif ($random == "paper" and $player == "spock")
+{
+    echo "<p>Paper disproves spock, the Computer wins!</p><br>";   
+}
+elseif ($random == "spock" and $player == "paper")
+{
+    echo "<p>Paper disproves spock, the Player wins!</p><br>";
+}
+
+
+if ($random == "scissors" and $player == "spock")
+{
+    echo "<p>Spock smashes scissors, the Player wins!</p><br>";
+}
+elseif ($random == "spock" and $player == "scissors")
+{
+    echo "<p>Spock smashes scissors, the Computer wins!</p><br>";
+}
+elseif ($random == "scissors" and $player == "lizard")
+{
+    echo "<p>Scissors decapitates lizard, the Computer wins!</p><br>";
+}
+elseif ($random == "lizard" and $player == "scissors")
+{
+    echo "<p>Scissors decapitates lizard, the Player wins!</p><br>";
+}
+
+
+if ($random == "spock" and $player == "lizard")
+{
+    echo "<p>Lizard poisons spock, the Player wins!</p><br>";
+}
+elseif ($random == "lizard" and $player == "spock")
+{
+    echo "<p>Lizard poisons spock, the Computer wins!</p><br>";
+}
+if ($player == $random)
+{
+    echo "<p>It's a tie!</p><br>";
+}
+
+?>
+	</body>
+</html>
